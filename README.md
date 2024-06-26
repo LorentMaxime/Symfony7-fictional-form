@@ -49,7 +49,7 @@ Puis
 ```
 bin/mailpit
 ```
-##Utilisation
+## Utilisation
 Pour lancer l'app, il suffit de lancer le serveur PHP:
 ```
 $ php -S localhost:8000 -t public
