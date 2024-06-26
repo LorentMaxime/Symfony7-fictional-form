@@ -1,4 +1,4 @@
-### Symfony7-fictional-form
+# Symfony7-fictional-form
 
 ## Description
 Ceci est avant tout un projet pour m'entrainer à l'utilisation du framework Symfony7 et également à PHP!
