@@ -38,7 +38,7 @@ DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.37&cha
 
 * Installer MailPit pour un faux serveur de dev (il est simplement executable)
 &nbsp;
-Télécharcher MailPit](https://github.com/axllent/mailpit/releases/tag/v1.18.7)
+[Télécharcher MailPit](https://github.com/axllent/mailpit/releases/tag/v1.18.7)
 
 Apres extraction, le placer dans le fichier bin du projet pour que ce soit un executable comme les autres.
 Possible de verifier qu'il soit executable, lancer la commande dans le terminal. Dans le projet, à la racine :
@@ -48,5 +48,10 @@ chmod +x bin/mailpit
 Puis
 ```
 bin/mailpit
+```
+##Utilisation
+Pour lancer l'app, il suffit de lancer le serveur PHP:
+```
+$ php -S localhost:8000 -t public
 ```
 
