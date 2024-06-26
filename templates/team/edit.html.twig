@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title "L'équipe : "  ~ user.fullName %}
+
+{% block body %}
+
+    <h1>{{ user.fullName }}</h1>
+
+    <div class="container-fluid">
+        {{ form(form) }}
+        {# {{ form_start(form)}}
+        {{ form_end(form)}} #}
+    </div>
+{% endblock %}

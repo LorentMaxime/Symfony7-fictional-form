@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Toute l'équipe" %}
+
+{% block body %}
+
+<div class="">
+    <h1 class="mb-5">Présentation de toute l'équipe!</h1>
+
+    <p>
+        <a class="btn btn-primary btn-sm" href="{{ path('team.create') }}">Créer</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nom/Prenom</th>
+            <th>Actions</th>
+        <tr>
+        </thead>
+        <tbody>
+         {% for user in users %}
+         <tr>
+            <td>
+                <a href="{{ path('team.show', {id: user.id, slug: user.slug}) }}">{{ user.fullName }}</a>
+            </td>
+             <td>
+                <div class="d-flex gap-1">
+                    <a class="btn btn-primary btn-sm" href="{{ path('team.edit', {id: user.id}) }}">Editer</a>
+                    <form action="{{ path('team.delete', {id: user.id}) }}" method="post">
+                        {# ce champ caché permet de simuler une method DELETE pour certains navigateurs #}
+                        {# pour modifier la methode utilisé grace au champ caché, j'ajoute http_method_override:true dans config>packages>framework.yaml#}
+                        <input type="hidden" name="_method" value="DELETE"> 
+                        <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                    </form>
+                </div>
+            </td>
+         </tr>
+         {% endfor %}
+        </tbody>        
+    </table>
+</div>
+{% endblock %}
