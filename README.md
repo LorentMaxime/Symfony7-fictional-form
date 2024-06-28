@@ -7,7 +7,7 @@ Stack technique:
 * Composer
 * MySQL
 * MailPit (https://github.com/axllent/mailpit/releases/tag/v1.18.7)
-* Bootstrap 5
+* Bootstrap 5 😓
 
 
 ## Prérequis techniques
