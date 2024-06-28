@@ -31,7 +31,8 @@ $ composer install
 [Télécharger la version pour MySQL de Adminer (version anglaise pour la légèreté)](https://www.adminer.org/)
 
 
-* renseigner la configuration de connexion à cette base de données dans le fichier .env :
+* renseigner la configuration de connexion à cette base de données dans le fichier .env:
+exemple:
 ```
 DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.37&charset=utf8mb4&charset=utf8mb4"
 ```
