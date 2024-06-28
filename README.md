@@ -57,6 +57,6 @@ bin/mailpit
 ```
 MailPit est accessible sur la navigateur à l'url :
 ```
-localhost:1025
+localhost:8025
 ```
 
