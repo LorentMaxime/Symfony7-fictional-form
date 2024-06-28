@@ -26,7 +26,7 @@ Stack technique:
 $ composer install
 ```
 
-* Créer une base de donnée MySQL. Peut etre telecharger Adminer pour avoir une interface pour communiquer avec la BDD, pour tester les identifiants et remplir la BDD initialement.
+* Créer une base de donnée MySQL. Adminer est placé dans le dossier 'public' du projet.
 &nbsp;
 [Télécharger la version pour MySQL de Adminer (version anglaise pour la légèreté)](https://www.adminer.org/)
 
@@ -36,22 +36,27 @@ $ composer install
 DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.37&charset=utf8mb4&charset=utf8mb4"
 ```
 
-* Installer MailPit pour un faux serveur de dev (il est simplement executable)
+* MailPit est installé dans le dossier bin du projet pour que ce soit un executable comme les autres.
 &nbsp;
 [Télécharcher MailPit](https://github.com/axllent/mailpit/releases/tag/v1.18.7)
 
-Apres extraction, le placer dans le fichier bin du projet pour que ce soit un executable comme les autres.
-Possible de verifier qu'il soit executable, lancer la commande dans le terminal. Dans le projet, à la racine :
+
+## Utilisation
+Pour lancer l'app, il suffit de lancer le serveur PHP:
 ```
-chmod +x bin/mailpit
+$ php -S localhost:8000 -t public
+```
+
+Pour lancer MailPit, lancer la commande dans le terminal. Dans le projet, à la racine du projet:
+```
+chmod +x bin/mailpit (ceci peut changer selon la configuration personnelle)
 ```
 Puis
 ```
 bin/mailpit
 ```
-## Utilisation
-Pour lancer l'app, il suffit de lancer le serveur PHP:
+MailPit est accessible sur la navigateur à l'url :
 ```
-$ php -S localhost:8000 -t public
+localhost:1025
 ```
 
