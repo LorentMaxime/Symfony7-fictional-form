@@ -6,5 +6,14 @@
 
     <div class="">
         <h1>{{ user.fullName }}</h1>
+        <div>
+        <p class="mt-5">Détails des infos de l'utilisateur :</p>
+            <ul>
+                <li>{{ user.firstname }}</li>
+                <li>{{ user.lastname }}</li>
+                <li>{{ user.slug }}</li>
+                <li>{{ user.email }}</li>
+            </ul>
+        </div>
     </div>
 {% endblock %}

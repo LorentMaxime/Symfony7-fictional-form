@@ -19,17 +19,18 @@ class User
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\Length(min: 2)]
-    #[Assert\Regex('/^[a-z0-9_-]{3,15}$/', message:'invalid firstname: minimum 3 characters')]
+    #[Assert\Length(min: 2, max:150)]
+    #[Assert\NotBlank()]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\Length(min: 2)]
+    #[Assert\Length(min: 2, max: 150)]
+    #[Assert\NotBlank()]
     #[Assert\Regex('/^[a-z0-9_-]{3,15}$/', message:'invalid lastname: minimum 3 characters')]
     private ?string $lastname = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\Length(min:5)]
+    #[Assert\Length(min:5, max:150)]
     #[Assert\Regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', message: 'invalid slug')]
     private ?string $slug = null;
 
@@ -42,6 +43,8 @@ class User
     #[ORM\Column(length: 255)]
     #[Assert\Length(min:5)]
     #[Assert\Regex('/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/')]
+    #[Assert\NotBlank()]
+    #[Assert\Email()]
     private ?string $email = null;
 
     #[ORM\Column(length: 255, nullable: true)]

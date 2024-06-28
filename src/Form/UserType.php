@@ -22,19 +22,22 @@ class UserType extends AbstractType
     {
         $builder
             ->add('firstname', TextType::class, [
-                'label' => 'Prénom'
+                'label' => 'Prénom',
+                'empty_data' => ''
             ])
             ->add('lastname',  TextType::class, [
-                'label' => 'Nom'
+                'label' => 'Nom',
+                'empty_data' => ''
             ])
             ->add('slug', TextType::class, [
+                'required' => false,
                 'constraints' => new Sequentially([
-                    new Length(min: 10),
+                    new Length(min: 6),
                     new Regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', message: "Ceci n'est pas un slug valide"),
                     ])
             ])
             ->add('email')
-            ->add('thumbnail')
+            // ->add('thumbnail')
             ->add('save', SubmitType::class, [
                 'label' => 'Envoyer'
             ])
